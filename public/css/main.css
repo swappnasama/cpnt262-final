@@ -33,6 +33,36 @@ h4 {
   background-size: 30px;
 }
 
+  /*******/
+ /* NAV */
+/*******/
+
+.menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu ul {
+  position: relative;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #111;
+}
+
+.menu ul li a:hover {
+  color: blue;
+}
+
   /****************/
  /* HERO SECTION */
 /****************/
@@ -152,28 +182,36 @@ h4 {
   transform: scale(0.6) translateY(-20px);
 }
 
-.menu {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 300px;
-  height: 100%;
+.container-404 {
+  height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap-reverse;
   align-items: center;
   justify-content: center;
+  line-height: 1;
 }
 
-.menu ul {
-  position: relative;
+  /************/
+ /* 404 Page */
+/************/
+
+.text-404 {
+  max-width: 40ch;
 }
 
-.menu ul li a {
-  text-decoration: none;
-  font-size: 1.5rem;
-  color: #111;
+.text-404 h2 {
+  font-size: 3rem;
 }
 
-.menu ul li a:hover {
-  color: blue;
+.text-404 h3 {
+  font-size: 2rem;
+}
+
+.text-404 p {
+  margin-top: 15px;
+}
+
+.img-404 img {
+  
+  width: 350px;
 }
