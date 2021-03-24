@@ -215,3 +215,72 @@ h4 {
   
   width: 350px;
 }
+
+  /******************/
+ /* Subscribe Form */
+/******************/
+
+.regFormBody {
+  background: url('/public/images/food-backgound.png');
+}
+
+.regForm {
+  display: flex;
+  justify-content: center;
+}
+
+#fs-frm {
+  display: flex;
+  flex-direction: column;
+  max-width: 90ch;
+  max-height: 90%;
+  padding: 1rem;
+  margin-top: 4rem;
+
+  background: #fff;
+}
+
+#fs-frm-inputs {
+  padding: 1rem;
+}
+
+#fs-frm-inputs input, .comm {
+  margin: 1rem;
+  padding: 1rem;
+  width: 90%;
+  border: .5px solid gray;
+}
+
+.button-like {
+  padding: 1rem;
+  border: .5px solid gray;
+}
+
+.button-like:hover, .button-like:active {
+  cursor: pointer;
+}
+
+.med {
+  max-width: 50%;
+}
+
+.short {
+  max-width: 20%;
+}
+
+.comm {
+  resize: none;
+}
+
+.regButton {
+  width: 50%;
+  padding: 1rem;
+
+  text-align: center;
+  align-self: center;
+}
+
+.regButton:hover, .regButton:active {
+  cursor: pointer;
+  background-color: darkgray;
+}
