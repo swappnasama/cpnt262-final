@@ -1,6 +1,7 @@
 body {
   font-family: 'Hind', sans-serif;
   line-height: 1.5;
+  overflow: hidden;
 }
 
 h1,
@@ -39,28 +40,38 @@ h4 {
 
 .menu {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 100px;
+  right: 30px;
   width: 300px;
   height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end;  
+  z-index: 10;
+  transform: translateX(200px);
+  transition: 200ms ease-in-out;
+}
+
+.menu.active {
+  transform: translateX(0);  
 }
 
 .menu ul {
   position: relative;
 }
 
+.menu ul li {
+  padding-top: 10px;
+}
+
 .menu ul li a {
   text-decoration: none;
   font-size: 1.5rem;
-  color: #111;
+  color: #fff;
 }
 
 .menu ul li a:hover {
-  color: blue;
+  color: rgb(196, 109, 109);
 }
 
   /****************/
@@ -102,10 +113,6 @@ h4 {
   height: 100%;
   object-fit: cover;
   opacity: 0.8;
-}
-
-.hero.active {
-  right: 300px;
 }
 
 .overlay {
