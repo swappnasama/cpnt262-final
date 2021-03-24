@@ -1,7 +1,7 @@
 body {
   font-family: 'Hind', sans-serif;
   line-height: 1.5;
-  overflow: hidden;
+  overflow: hidden;  
 }
 
 h1,
@@ -15,6 +15,18 @@ h4 {
  /* HEADER */
 /**********/
 
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .toggle {
   position: relative;
   width: 60px;
@@ -23,8 +35,7 @@ h4 {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 30px;
-  cursor: pointer;
-  filter: invert(1);
+  cursor: pointer;  
 }
 
 .toggle.active {
@@ -67,7 +78,7 @@ h4 {
 .menu ul li a {
   text-decoration: none;
   font-size: 1.5rem;
-  color: #fff;
+  color: #111;
 }
 
 .menu ul li a:hover {
@@ -93,16 +104,16 @@ h4 {
   transition: 300ms;
 }
 
-.hero header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 40px 100px;
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.hero .toggle {
+  filter: invert(1);
+}
+
+.hero .menu ul li a {
+  color: #fff;
+}
+
+.hero .menu ul li a:hover {
+  color: rgb(196, 109, 109);
 }
 
 .hero video {
@@ -290,4 +301,14 @@ h4 {
 .regButton:hover, .regButton:active {
   cursor: pointer;
   background-color: darkgray;
+}
+
+  /*****************/
+ /* Media Queries */
+/*****************/
+
+@media screen and (max-width: 768px) {
+  header {
+    padding: 40px 20px;
+  }
 }
