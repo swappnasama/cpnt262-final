@@ -1,42 +1,32 @@
-// Need some modules first
-const path = require('path')
 const express = require('express')
+const index = require('./routes')
+const mongoose = require('./_connection.js') 
+const Gallery=require('./models/gallery');
 
 const app = express()
+app.set('view engine','ejs')
 
-// Use the ejs view engine to properly render the ejs files into html
-app.set('view engine', 'ejs')
+app.use(express.static('./public'));
 
-// Set up some locals to fill out some info with less repetition
-app.use((req, res, next) => {
-  res.locals = {
-    siteTitle: "Image Gallery Placeholder Title",
-    copyright: "Nerd Squad 2021"
-  }
-})
+app.use('/',index);
 
-// Some static middleware, want this to happen first
-app.use(express.static(path.join(__dirname, 'public')))
+app.get('/gallery', (req,res)=>{
+  Gallery.find((err,galleries)=>{
+    res.json(galleries);
+    
+  });
+  
+});
 
-app.get('/', function(req, res) {
-  res.render('pages/index');
-})
+app.use(function(req,res){
+  res.status(404);
+  res.redirect('/404');
+  
+});
 
-// If the above static file doesnt fire. respond with something.
-app.get('/', (request, response) => {
-  response.send('Oops! There should be something here!')
-})
 
-// Keep this block of code below all other request functions! If nothing is found at all!
-app.use(function(request, response) {
-  response.status(404);
-  response.sendFile(__dirname + 'public/404.html');
-})
-
-// Define the port we want to use
 const PORT = process.env.PORT || 3000
 
-// Fire up that server!
-app.listen(PORT, function(){
-  console.log(`Things are happening on port ${PORT}`)
+app.listen(PORT, () => {
+  console.log(`Listening on port: ${PORT}`)
 })

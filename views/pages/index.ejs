@@ -5,15 +5,34 @@
 </head>
 
 <body>
-  <header>
-    <%- include('../partials/header') %>
-  </header>
+  <!-- Header -->
+  <%- include('../partials/header') %>
+  <Main>
+    <section class="hero">
+      <video src="images/hero-vid.mp4" muted loop autoplay></video>
+  
+      <div class="overlay"></div>
+      <div class="text">
+        <h2>Eating Food</h2>
+        <h3>Is Fun To Do Together</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, quis sint fugiat asperiores esse harum
+          consequuntur quisquam. Molestiae non, eveniet, amet laboriosam deserunt asperiores rerum expedita consequuntur
+          sed quam similique?
+        </p>
+        <a href="#">See Our Menu</a>
+      </div>
+  
+      <ul class="socials">
+        <li><a href=""><img src="images/facebook.png" alt=""></a></li>
+        <li><a href=""><img src="images/twitter.png" alt=""></a></li>
+        <li><a href=""><img src="images/instagram.png" alt=""></a></li>
+      </ul>
+    </section>
+  </Main>
 
-  <Main><p>Hello World</p></Main>
-
-  <footer>
-    <%- include('../partials/footer') %>
-  </footer>
+  <!-- Footer Partial-->
+  <%- include('../partials/footer') %>
 </body>
 
 </html>
