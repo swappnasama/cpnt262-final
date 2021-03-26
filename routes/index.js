@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const config = require('../config')
+const Gallery=require('../models/gallery');
 
 router.use((req, res, next) => {
   res.locals = config
@@ -25,6 +26,12 @@ router.get('/team', (req, res) => {
 //router for gallery page
 router.get('/menu', (req, res) => {
   res.render('pages/gallery', {pageTitle: 'Menu'})
+})
+
+// single image render
+router.get('/gallery/:id', async(req,res)=>{
+  const image = await Gallery.findOne({id: req.params.id});
+  res.render('pages/singlemenu', {pageTitle: image.menuTitle, image})
 })
 //router for page not found page
 router.get('/404', (req, res) => {

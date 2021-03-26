@@ -2,6 +2,7 @@ const express = require('express')
 const index = require('./routes')
 const mongoose = require('./_connection.js') 
 const Gallery=require('./models/gallery');
+const Team=require('./models/team');
 
 const app = express()
 app.set('view engine','ejs')
@@ -13,6 +14,13 @@ app.use('/',index);
 app.get('/gallery', (req,res)=>{
   Gallery.find((err,galleries)=>{
     res.json(galleries);
+    
+  });
+  
+});
+app.get('/member', (req,res)=>{
+  Team.find((err,teams)=>{
+    res.json(teams);
     
   });
   

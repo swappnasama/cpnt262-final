@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head') %>
+</head>
+
+<body>
+  <!-- Header -->
+  <%- include('../partials/header') %>
+  <Main>
+    <section class="single-menu">
+      <h2><%= pageTitle %></h2>
+      <img class="single-img" width="<%= image.width %>" height="<%= image.height %>" src="../<%= image.imageSrc %>" alt="<%= pageTitle %>"/>
+    </section>
+    
+  </Main>
+
+  <!-- Footer Partial-->
+  <%- include('../partials/footer') %>
+</body>
+
+</html>

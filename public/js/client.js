@@ -75,3 +75,47 @@ fetch('/gallery')
     console.log(err);
   });
 }
+
+
+//Team Scripts
+const teamTemplate= document.querySelector('#team-template');
+if(teamTemplate!== null){
+//Fetching gallery information
+fetch('/member')
+  .then(function(response){
+    // JSON that is returned from the server must be converted to a JS object asynchronously.
+   
+    if (!response.ok) {
+      throw new Error('Not 200 OK');
+    }
+    return response.json();
+
+  })
+  .then(function(data){
+    
+      //consts decleration
+      const teamTemplate= document.querySelector('#team-template');
+      const section= document.querySelector('.team-wrapper');
+
+      //looping through image object array galleryImages
+      data.forEach(function(members){
+        //cloning the template
+        const clone = teamTemplate.content.cloneNode(true);
+
+        //setting all the members data to appropriate attributes
+        clone.querySelector('img').src=members.profilePic;
+        clone.querySelector('img').alt=members.profilePic;
+        clone.querySelector('.name').innerHTML=members.name;
+        clone.querySelector('.title').innerHTML=members.title;
+        clone.querySelector('.bio').innerHTML=members.bio;
+
+        //appending clone to section to display team members
+        section.appendChild(clone);
+
+      });
+  })
+  .catch(function(err){
+    // An error or `reject` from any of the above `.then()` blocks will end up here.
+    console.log(err);
+  });
+}
