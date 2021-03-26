@@ -5,10 +5,10 @@
 </head>
 
 <body>
-  <!-- Header -->
+  <header class="sub-header">
   <%- include('../partials/header') %>
-  
-  <Main>
+  </header>
+  <main class="regFormBG">
     <form id="fs-frm" name="registration-form" accept-charset="utf-8" action="https://formspree.io/f/{form_id}" method="post">
       <fieldset id="fs-frm-inputs">
         <label for="full-name">Full Name</label>
@@ -33,10 +33,11 @@
       </fieldset>
       <input class="regButton" type="submit" value="Subscribe">
     </form>
-  </Main>
-
-  <!-- Footer Partial-->
+    <!-- Footer Partial-->
   <%- include('../partials/footer') %>
+  </main>
+
+  
 </body>
 
 </html>
