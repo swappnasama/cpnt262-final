@@ -4,11 +4,11 @@
   <%- include('../partials/head') %>
 </head>
 
-<body>
-  <!-- Header -->
-  <%- include('../partials/header') %>
-  <Main>
+<body>    
     <section class="hero">
+      <header>      
+        <%- include('../partials/header') %>
+      </header>
       <video src="images/hero-vid.mp4" muted loop autoplay></video>
   
       <div class="overlay"></div>
@@ -28,11 +28,8 @@
         <li><a href=""><img src="images/twitter.png" alt=""></a></li>
         <li><a href=""><img src="images/instagram.png" alt=""></a></li>
       </ul>
-    </section>
-  </Main>
-
-  <!-- Footer Partial-->
-  <%- include('../partials/footer') %>
+      <%- include('../partials/footer') %>
+    </section>  
 </body>
 
 </html>
