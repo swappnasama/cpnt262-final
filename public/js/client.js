@@ -1,10 +1,20 @@
-const menuToggle = document.querySelector('.toggle');
-const menu = document.querySelector('.menu');
+// Navigation Toggle
+const menu = document.querySelector('.nav-toggle');
+const nav = document.querySelector('.navigation');
+const navLinks = document.querySelectorAll('.navigation li');
 
-menuToggle.addEventListener('click', () => {
-  menuToggle.classList.toggle('active')
-  menu.classList.toggle('active')
-})
+menu.addEventListener('click', () => {
+  nav.classList.toggle('navigation-active');
+  navLinks.forEach((link, index) => {
+    if (link.style.animation) {
+      link.style.animation = '';
+    } else {
+      link.style.animation = `navFade 0.5s ease forwards ${index / 7 + .2}s`;
+    }      
+  });
+
+  menu.classList.toggle('toggle')
+});
 
 //Gallery Scripts
 const imageTemplate= document.querySelector('#image-template');

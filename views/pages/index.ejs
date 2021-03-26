@@ -4,11 +4,11 @@
   <%- include('../partials/head') %>
 </head>
 
-<body>
-  <!-- Header -->
-  <%- include('../partials/header') %>
-  <Main>
+<body>    
     <section class="hero">
+      <header>      
+        <%- include('../partials/header') %>
+      </header>
       <video src="images/hero-vid.mp4" muted loop autoplay></video>
   
       <div class="overlay"></div>
@@ -20,19 +20,16 @@
           consequuntur quisquam. Molestiae non, eveniet, amet laboriosam deserunt asperiores rerum expedita consequuntur
           sed quam similique?
         </p>
-        <a href="#">See Our Menu</a>
+        <a href="/menu">See Our Menu</a>
       </div>
   
       <ul class="socials">
-        <li><a href=""><img src="images/facebook.png" alt=""></a></li>
-        <li><a href=""><img src="images/twitter.png" alt=""></a></li>
-        <li><a href=""><img src="images/instagram.png" alt=""></a></li>
+        <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><img src="images/facebook.png" alt=""></a></li>
+        <li><a href="https://twitter.com/?lang=en" target="_blank" rel="noopener noreferrer"><img src="images/twitter.png" alt=""></a></li>
+        <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img src="images/instagram.png" alt=""></a></li>
       </ul>
-    </section>
-  </Main>
-
-  <!-- Footer Partial-->
-  <%- include('../partials/footer') %>
+      <%- include('../partials/footer') %>
+    </section>  
 </body>
 
 </html>
