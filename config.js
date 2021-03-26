@@ -1,4 +1,5 @@
 module.exports = {
-    siteTitle: "Image Gallery Placeholder Title",
+    siteTitle: "NerdSquad",
+    pageTitle: "Home",
     copyright: "Nerd Squad 2021"
 }
