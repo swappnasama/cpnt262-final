@@ -2,8 +2,7 @@ body {
   position: relative;
   font-family: 'Hind', sans-serif;
   line-height: 1.5;
-  overflow-x: hidden;
-  background-color: #555;   
+  overflow-x: hidden;    
 }
 
 h1,
