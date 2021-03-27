@@ -479,6 +479,7 @@ footer {
   /* NAVIGATION */
 
   .navigation {
+    display: none;
     position: absolute;
     right: 0px;
     height: 92vh;
@@ -494,6 +495,7 @@ footer {
 
   .navigation-active {
     transform: translateX(0%);
+    display: flex;
   }
 
   .nav-toggle {
