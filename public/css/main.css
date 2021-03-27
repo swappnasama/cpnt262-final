@@ -333,14 +333,17 @@ main{
   flex-wrap: wrap;
   justify-content: center;
   background-color: #f1f1f1;
+  width: 100vw;
+  height: 100vh;
 }
 
 /* Figure and figure caption styles */
 figure{
-  width:300px;
-  height:400px;
+  width: 315px;
+  height: 400px;
   position: relative;
-  margin: 0;
+  margin: 10px;
+  
 }
 /* Displays fig caption only on hover */
 figure:hover figcaption{
@@ -369,8 +372,11 @@ figcaption {
   
 }
 figcaption h5{
-  font-size:24px;
+  font-size: 24px;
   margin: 10px 0;
+  font-style: italic;
+  font-stretch: extra-condensed;
+  letter-spacing: .2rem;
   
 }
 figcaption p{
@@ -407,6 +413,8 @@ figure img{
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  background-image: url("../images/team-bg.jpg");
+  background-position: center;
 }
 .team-cards{
   display: flex;
@@ -444,12 +452,10 @@ figure img{
 /**********/
 
 footer {
-  position: absolute;
-  left: 0;
-  bottom: 0;
   width: 100%;  
   color: white;
   text-align: center; 
+  padding:1rem;
 }
 
   /*****************/
