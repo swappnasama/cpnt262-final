@@ -1,9 +1,11 @@
+html {
+  overflow-x: hidden;
+}
+
 body {
   position: relative;
   font-family: 'Hind', sans-serif;
-  line-height: 1.5;
-  overflow-x: hidden;
-  /* background-color: #555;    */
+  line-height: 1.5;      
 }
 
 h1,
@@ -463,9 +465,6 @@ footer {
 /*****************/
 
 @media screen and (max-width: 768px) {
-  body {
-    overflow-x: hidden;
-  }
 
   /* NAVIGATION */
 
