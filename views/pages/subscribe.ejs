@@ -9,27 +9,26 @@
   <%- include('../partials/header') %>
   </header>
   <main class="regFormBG">
-    <form id="fs-frm" name="registration-form" accept-charset="utf-8" action="https://formspree.io/f/{form_id}" method="post">
+    <form id="fs-frm" name="registration-form" accept-charset="utf-8" action="/admin" method="POST">
       <fieldset id="fs-frm-inputs">
         <label for="full-name">Full Name</label>
         <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
         <label for="email-address">Email Address</label>
-        <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required="">
+        <input type="email" name="email" id="email-address" placeholder="email@domain.tld" required="">
         <label for="street-address">Street Address</label>
-        <input type="text" name="street" id="street-address" placeholder="Street" required="">
+        <input type="text" name="address" id="street-address" placeholder="Street" required="">
         <fieldset class="locale">
           <legend>Locale</legend>
           <input class="med" type="text" name="city" placeholder="City" required="">
-          <select class="short button-like" name="state" required="">
+          <select class="short button-like" name="province" required="">
             <option value="Select" selected="" disabled="">Province</option>
             <option value="AB">Alberta</option>
             <option value=""></option>
           </select>
-          <input class="short" type="text" name="postal-code" placeholder="postal-code" required="">
+          <input class="short" type="text" name="postalcode" placeholder="postal-code" required="">
         </fieldset>
         <label for="note">Note</label><br>
-        <textarea class="comm" rows="2" name="note" id="note" placeholder="Include any additional information such as allergies"></textarea>
-        <input type="hidden" name="_subject" id="email-subject" value="Registration Form Submission">
+        <textarea class="comm" rows="2" name="note" id="note" placeholder="Include any additional information such as allergies"></textarea>        
       </fieldset>
       <input class="regButton" type="submit" value="Subscribe">
     </form>
